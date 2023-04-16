@@ -1,6 +1,0 @@
-<IfModule mod_auth_basic.c>
-AuthType Basic
-AuthName "Restricted Content"
-AuthUserFile /etc/apache2/.htpasswd
-Require valid-user
-</IfModule>
