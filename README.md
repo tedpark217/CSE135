@@ -8,7 +8,10 @@
 
 ## Grader Apache Login:
 
-* `grader@137.184.84.48`
+* `grader@137.184.84.48` with the provided key called `graderKey`
+
+Since the key has all modifications allowed, the file modification settings should be updated. 
+By running `chmod 600 /path/to/key/graderKey` and `ssh -i /path/to/key/graderKey grader@137.184.84.48` the graders can successfully login to the apache web server.
 
 ## Domain Login:
 
@@ -28,7 +31,8 @@ root directory.
 
 ## Compression of HTML Files
 
-
+Comparing before and after of the compression using mod_deflate, it can be seen that before compression, the response header did not show any type of content encoding in the DevTools. However, after compression, the DevTools show the "Content-Encoding=gzip" part, which shows that the webpage has
+been compressed. Also, the HTML file experienced a reduction in size, leading to faster loading times and improved overall performance. 
 
 ## Hiding Server Header
 
