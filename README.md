@@ -2,18 +2,19 @@
 
 ## Team Members:
 
-* 'Ted Park'
-* 'Daixi Shen'
-* 'Hao Chen'
+* `Ted Park`
+* `Daixi Shen`
+* `Hao Chen`
 
 ## Grader Apache Login:
 
-* grader@137.184.84.48
+* `grader@137.184.84.48`
 
-## csesd.site Login:
+## Domain Login:
 
-* Username: 'grader'   
-* Password: '12345678'
+* Domain Name: `https://csesd.site`
+* Username: `grader`   
+* Password: `12345678`
 
 ## Github Auto Deploy Setup:
 
@@ -35,8 +36,8 @@ To change the server header from revealing apache to "CSE135," we took these ste
 
 1. Install and enable security2 mod.
 2. In apache configuration file, add these lines.
-    * 'ServerTokens Full'
-    * 'SecServerSignature "CSE135 Server'
+    * `ServerTokens Full`
+    * `SecServerSignature "CSE135 Server`
 3. Restart the apache web server and server name should be changed.
 
 
