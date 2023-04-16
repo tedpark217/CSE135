@@ -11,7 +11,7 @@
 * `grader@137.184.84.48` with the provided key called `graderKey`
 
 Since the key has all modifications allowed, the file modification settings should be updated. 
-By running `chmod 600 /path/to/key/graderKey` and `ssh -i /path/to/key/graderKey grader@137.184.84.48` the graders can successfully login to the apache web server.
+By running `chmod 600 /path/to/key/graderKey` and `ssh -i /path/to/key/graderKey grader@137.184.84.48` the graders can successfully login to the apache web server. There is no passphrase for the key.
 
 ## Domain Login:
 
