@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 print("Cache-Control: no-cache\n");
 print("Content-type: text/html\n\n");
 
