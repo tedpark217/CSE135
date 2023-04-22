@@ -9,7 +9,7 @@ int main(void)
   // Print HTML header
   printf("Cache-Control: no-cache\n");
   printf("Content-type: text/html\n\n");
-  printf("<html><head><title>TEAM TDH - Hello CGI World</title></head>\
+  printf("<html><head><title>TEAM TDH - Hello Python</title></head>\
 	<body><h1 align=center>TEAM TDH - Hello HTML World</h1>\
   	<hr/>\n");
 

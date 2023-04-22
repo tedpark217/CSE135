@@ -1,12 +1,22 @@
-print("Cache-Control: no-cache\n");
-print("Content-type: text/html\n\n");
+#!/usr/bin/python
 
-print("<html><head><title>TEAM TDH - Hello CGI World</title></head>\
-	<body><h1 align=center>TEAM TDH - Hello HTML World</h1>\
-  	<hr/>\n");
+import json
+import time
+import os
 
-print("TEAM TDH - Hello World<br/>\n");
-#print("This program was generated at: %s\n<br/>", ctime(&t));
-#print("Your current IP address is: %s<br/>", getenv("REMOTE_ADDR"));
+t = time.localtime()
+currTime = time.strftime("%c", t)
+ip = os.environ["REMOTE_ADDR"]  
 
-print("</body></html>");
+print("Content-type: application/json\r\n\r\n")
+
+file = {
+    "title": "TEAM TDH - Hello, Python!",
+    "heading": "TEAM TDH - Hello, Python!",
+    "message": "This page was generated with the Python programming language",
+    "time": currTime,
+    "IP": ip
+}
+
+jsonFile = json.dumps(file, indent=4)
+print(jsonFile)

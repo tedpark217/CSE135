@@ -8,7 +8,8 @@ print "<title>TEAM TDH - Hello, Perl!</title>";
 print "</head>";
 print "<body>";
 
-print "<h1>TEAM TDH - Hello, Perl!</h1>";
+print "<h1 align=center>TEAM TDH - Hello HTML World</h1>\
+  	<hr/>\n";
 print "<p>This page was generated with the Perl programming langauge</p>";
 
 $date = localtime();
