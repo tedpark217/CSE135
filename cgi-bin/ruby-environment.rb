@@ -2,6 +2,7 @@
 
 require 'cgi'
 cgi = CGI.new
+puts "Cache-Control: no-cache\n";
 puts cgi.header
 
 puts "<html>" 

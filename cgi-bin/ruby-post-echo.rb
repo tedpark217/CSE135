@@ -5,6 +5,7 @@ require 'cgi'
 request_body = $stdin.read()
 
 cgi = CGI.new
+puts "Cache-Control: no-cache\n";
 puts cgi.header
 
 puts "<html>" 
