@@ -1,31 +1,32 @@
-#!/usr/bin/python
+#!/usr/bin/ruby
 
-import sys
-import os
+require 'cgi'
 
-print("Content-type:text/html\r\n\r\n")
-print("<html>")
-print("<head>")
+request_body = $stdin.read()
 
-print("<title>POST Request Echo</title>")
+cgi = CGI.new
+puts cgi.header
 
-print("</head>")
+puts "<html>" 
+puts "<head>" 
 
-print("<body>")
-print("<h1 align=center>POST Request Echo</h1><hr/>\n")
+puts "<title>POST Request Echo</title>" 
 
-print("<b>Message Body: </b> <br />\n")
-print("<ul>\n")
+puts "</head>" 
 
-query_string = sys.stdin.read()
+puts "<body>" 
+puts "<h1 align=center>POST Request Echo</h1><hr/>\n" 
 
-# Credit for this code to parse the Query string:
-# https://stackoverflow.com/questions/10113090/best-way-to-parse-a-url-query-string
-query = dict(item.split('=') for item in query_string.split('&') if item)
+puts "<b>Message Body: </b> <br />\n"
+puts "<ul>\n"
 
-for key, val in query.items():
-    print("<li>" + key + " = " + val + "</li>\n")
+temp = CGI::parse(request_body)
 
-print("</ul>\n")
-print("</body>")
-print("</html>")
+temp.each do |key, value|
+    puts "<li> #{key} = #{value} </li>\n"
+end
+
+puts "</ul>\n"
+
+puts "</body>" 
+puts "</html>" 

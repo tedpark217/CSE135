@@ -16,7 +16,7 @@ puts "<h1 align=center>Get Request Echo</h1><hr/>\n"
 
 puts "<b>Query String: </b>" + ENV["QUERY_STRING"] + "<br />\n"
 
-temp = CGI.parse(ENV["QUERY_STRING"])
+temp = CGI::parse(ENV["QUERY_STRING"])
 
 temp.each do |key, value|
     puts "#{key} = #{value} <br />\n";
