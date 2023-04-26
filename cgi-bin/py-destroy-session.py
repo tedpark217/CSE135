@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/python
 
 require 'cgi'
 require 'cgi/session'

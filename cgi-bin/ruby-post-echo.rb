@@ -16,7 +16,7 @@ puts "<title>POST Request Echo</title>"
 puts "</head>" 
 
 puts "<body>" 
-puts "<h1 align=center>POST Request Echo</h1><hr/>\n" 
+puts "<h1 align=\"center\">POST Request Echo</h1><hr/>\n" 
 
 puts "<b>Message Body: </b> <br />\n"
 puts "<ul>\n"

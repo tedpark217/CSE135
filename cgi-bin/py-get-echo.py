@@ -11,7 +11,7 @@ print("<title>GET Request Echo</title>")
 print("</head>")
 
 print("<body>")
-print("<h1 align=center>Get Request Echo</h1><hr/>\n")
+print("<h1 align=\"center\">Get Request Echo</h1><hr/>\n")
 
 print("<b>Query String: </b>" + os.environ["QUERY_STRING"] + "<br />\n")
 

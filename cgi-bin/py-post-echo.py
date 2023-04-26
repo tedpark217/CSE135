@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import sys
-import os
 
 print("Content-type:text/html\r\n\r\n")
 print("<html>")
@@ -12,7 +11,7 @@ print("<title>POST Request Echo</title>")
 print("</head>")
 
 print("<body>")
-print("<h1 align=center>POST Request Echo</h1><hr/>\n")
+print("<h1 align=\"center\">POST Request Echo</h1><hr/>\n")
 
 print("<b>Message Body: </b> <br />\n")
 print("<ul>\n")

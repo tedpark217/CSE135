@@ -13,7 +13,7 @@ puts "<title>GET Request Echo</title>"
 puts "</head>" 
 
 puts "<body>" 
-puts "<h1 align=center>Get Request Echo</h1><hr/>\n" 
+puts "<h1 align=\"center\">Get Request Echo</h1><hr/>\n" 
 
 puts "<b>Query String: </b>" + ENV["QUERY_STRING"] + "<br />\n"
 

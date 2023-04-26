@@ -15,7 +15,7 @@ puts "<title>General Request Echo</title>"
 puts "</head>" 
 
 puts "<body>" 
-puts "<h1 align=center>General Request Echo</h1><hr/>\n" 
+puts "<h1 align=\"center\">General Request Echo</h1><hr/>\n" 
 
 puts "<p><b>HTTP Protocol: </b>" + ENV["SERVER_PROTOCOL"] + "</p>"
 puts "<p><b>HTTP Method: </b>" + ENV["REQUEST_METHOD"] + "</p>"

@@ -12,7 +12,7 @@ print("<title>General Request Echo</title>")
 print("</head>")
 
 print("<body>")
-print("<h1 align=center>General Request Echo</h1><hr/>\n")
+print("<h1 align=\"center\">General Request Echo</h1><hr/>\n")
 
 
 print("<p><b>HTTP Protocol: </b>" + os.environ["SERVER_PROTOCOL"] + "</p>")

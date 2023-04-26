@@ -13,7 +13,7 @@ puts "<title>Environment Variables</title>"
 puts "</head>" 
 
 puts "<body>" 
-puts "<h1 align=center>Environment Variables</h1><hr/>\n" 
+puts "<h1 align=\"center\">Environment Variables</h1><hr/>\n" 
 
 temp = ENV.sort_by { |key| key }.to_h
 

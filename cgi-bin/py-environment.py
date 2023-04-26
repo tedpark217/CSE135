@@ -11,7 +11,7 @@ print("<title>Environment Variables</title>")
 print("</head>")
 
 print("<body>")
-print("<h1 align=center>Environment Variables</h1><hr/>\n")
+print("<h1 align=\"center\">Environment Variables</h1><hr/>\n")
 
 st = sorted(os.environ)
 
