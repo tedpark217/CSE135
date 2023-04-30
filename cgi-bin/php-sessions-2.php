@@ -1,5 +1,5 @@
 <?php
-session_name('name');
+session_id($_COOKIE['CGISESSID']);
 session_start();
 ?>
 
@@ -12,21 +12,7 @@ session_start();
 <h1>PHP Sessions Page</h1>
 
 <?php
-$cookie_name = 'name';
-setcookie($cookie_name, time() + (86400 * 30), "/");
-
-$name = null;
-if($_SESSION['name'] && $_POST['username']){
-    $name = $_POST['username'];
-}
-elseif($_SESSION['name']){
-    $name = $_SESSION['name'];
-}
-elseif($_POST['username']){
-    $name = $_POST['username'];
-}
-$_SESSION['name'] = $name;
-
+$name = $_SESSION['name'];
 if($name == null){
     echo "<p><b>Cookie: </b> No Cookie Set";
 }
@@ -37,6 +23,7 @@ else{
 ?>
 
 <br/><br/>
+<a href="/cgi-bin/php-sessions-1.php">Session Page 1</a><br/>
 <a href="/php-cgiform.html">PHP CGI Form</a><br />
 <form style="margin-top:30px" action="/cgi-bin/php-destroy-session.php" method="get">
 <button type="submit">Destroy Session</button>
