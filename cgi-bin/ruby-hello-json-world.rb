@@ -8,6 +8,6 @@ puts "Content-type: application/json\n\n";
 
 time = Time.new
 
-arr = {:title => "TEAM TDH - Hello, Ruby!", :heading => "TEAM TDH - Hello, Ruby!", :message => "This page was generated with the Ruby programming language", :time => time.ctime, :IP => ENV['REMOTE_ADDR']} 
+arr = {:title => "TEAM NoNamed - Hello, Ruby!", :heading => "TEAM NoNamed - Hello, Ruby!", :message => "This page was generated with the Ruby programming language", :time => time.ctime, :IP => ENV['REMOTE_ADDR']} 
 
 puts JSON.pretty_generate(arr, :indent => "\t")

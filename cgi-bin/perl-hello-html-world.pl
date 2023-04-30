@@ -4,11 +4,11 @@ print "Cache-Control: no-cache\n";
 print "Content-type: text/html\n\n";
 print "<html>";
 print "<head>";
-print "<title>TEAM TDH - Hello, Perl!</title>";
+print "<title>TEAM NoNamed - Hello, Perl!</title>";
 print "</head>";
 print "<body>";
 
-print "<h1 align=center>TEAM TDH - Hello HTML World</h1>\
+print "<h1 align=center>TEAM NoNamed - Hello HTML World</h1>\
   	<hr/>\n";
 print "<p>This page was generated with the Perl programming langauge</p>";
 

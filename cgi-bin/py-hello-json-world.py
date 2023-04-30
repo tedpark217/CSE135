@@ -11,8 +11,8 @@ ip = os.environ["REMOTE_ADDR"]
 print("Content-type: application/json\r\n\r\n")
 
 file = {
-    "title": "TEAM TDH - Hello, Python!",
-    "heading": "TEAM TDH - Hello, Python!",
+    "title": "TEAM NoNamed - Hello, Python!",
+    "heading": "TEAM NoNamed - Hello, Python!",
     "message": "This page was generated with the Python programming language",
     "time": currTime,
     "IP": ip

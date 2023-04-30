@@ -11,12 +11,12 @@ print("Content-type:text/html\r\n\r\n")
 print("<html>")
 print("<head>")
 
-print("<title>TEAM TDH - Hello, Python!</title>")
+print("<title>TEAM NoNamed - Hello, Python!</title>")
 
 print("</head>")
 
 print("<body>")
-print("<h1 align=\"center\">TEAM TDH - Hello HTML World</h1><hr/>\n")
+print("<h1 align=\"center\">TEAM NoNamed - Hello HTML World</h1><hr/>\n")
 
 print("<p>Hello, World</p>")
 print("<p>This page was generated with the Python programming langauge</p>")

@@ -9,11 +9,11 @@ int main(void)
   // Print HTML header
   printf("Cache-Control: no-cache\n");
   printf("Content-type: text/html\n\n");
-  printf("<html><head><title>TEAM TDH - Hello Python</title></head>\
-	<body><h1 align=center>TEAM TDH - Hello HTML World</h1>\
+  printf("<html><head><title>TEAM NoNamed - Hello C</title></head>\
+	<body><h1 align=center>TEAM NoNamed - Hello HTML World</h1>\
   	<hr/>\n");
 
- printf("TEAM TDH - Hello World<br/>\n");
+ printf("TEAM NoNamed - Hello World<br/>\n");
  printf("This program was generated at: %s\n<br/>", ctime(&t));
  printf("Your current IP address is: %s<br/>", getenv("REMOTE_ADDR"));
  

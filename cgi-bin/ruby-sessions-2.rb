@@ -1,24 +1,11 @@
 #!/usr/bin/ruby
 
-request_body = $stdin.read()
-requestArray = request_body.split('=')
-post = requestArray[1]
-
 require 'cgi'
 require 'cgi/session'
 cgi = CGI.new
-s = CGI::Session.new(cgi, "session_key" => "name")
-cookie = CGI::Cookie.new("name", "val")
 
-name = nil
-if(s["name"] && post)
-    name = post
-elsif s["name"]
-    name = s["name"]
-elsif post
-    name = post
-end
-s["name"] = name
+s = CGI::Session.new(cgi, 'session_id' => "customKey") 
+name = s["name"]
 
 puts "Content-type: text/html\n\n"
 puts "<html>" 
@@ -29,7 +16,7 @@ puts "<title>Ruby Sessions</title>"
 puts "</head>" 
 
 puts "<body>" 
-puts "<h1>Ruby Sessions Page</h1>"
+puts "<h1>Ruby Sessions Page 2</h1>"
 
 if name == nil
 	puts "<p><b>Cookie: </b> No Cookie Set"
@@ -38,6 +25,7 @@ else
 end
 
 puts "<br/><br/>"
+puts "<a href=\"/cgi-bin/ruby-sessions-1.rb\">Session Page 1</a><br/>";
 puts "<a href=\"/ruby-cgiform.html\">Ruby CGI Form</a><br />"
 puts "<form style=\"margin-top:30px\" action=\"/cgi-bin/ruby-destroy-session.rb\" method=\"get\">"
 puts "<button type=\"submit\">Destroy Session</button>"
@@ -45,3 +33,5 @@ puts "</form>"
 
 puts "</body>" 
 puts "</html>" 
+
+s.close
