@@ -1,0 +1,24 @@
+{
+  "name": "public_html",
+  "version": "1.0.0",
+  "description": "## Team Members:",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tedpark217/CSE135.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tedpark217/CSE135/issues"
+  },
+  "homepage": "https://github.com/tedpark217/CSE135#readme",
+  "devDependencies": {
+    "json-server": "^0.17.3"
+  }
+}
