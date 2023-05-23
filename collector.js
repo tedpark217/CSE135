@@ -28,6 +28,7 @@ let type = navigator.connection.effectiveType;*/
 (function() {
   // data structure
   var data = {
+    session: {},
     staticData: {},
     performanceData: {},
     activityData: {
@@ -68,6 +69,7 @@ let type = navigator.connection.effectiveType;*/
     }
     document.body.removeChild(testElement);
     //below for image validation
+    /*
     let img = new Image();
     img.onload = function() {
         sData.allowsImages = true;
@@ -75,7 +77,8 @@ let type = navigator.connection.effectiveType;*/
     img.onerror = function() {
         sData.allowsImages = false;
     };
-    img.src = '/image/imageTest.jpg';
+    img.src = 'testImage.jpg';
+    */
   };
   
   // Collect Performance Data
@@ -178,6 +181,13 @@ let type = navigator.connection.effectiveType;*/
     url: window.location.href,
     timestamp: new Date()
   });
+
+  let sessionId = localStorage.getItem('sessionId');
+  if (!sessionId) {
+      sessionId = Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
+      localStorage.setItem('sessionId', sessionId);
+  }
+  data.session.sessionId = sessionId;
   
   // When user leaves
   window.onbeforeunload = function() {
@@ -190,6 +200,20 @@ let type = navigator.connection.effectiveType;*/
     // Send data
     var headers = {type: 'application/json'};
     var blob = new Blob([JSON.stringify(data)], headers);
-    navigator.sendBeacon('https://csesd.site/json/posts', blob);
+    navigator.sendBeacon('https://csesd.site/json/api', blob);
+
+    /*
+    var dataStatic = {session: data.session, staticData: data.staticData};
+    var blobStatic = new Blob([JSON.stringify(dataStatic)], headers);
+    navigator.sendBeacon('https://csesd.site/json/api/static', blobStatic);
+
+    var dataPerformance = {session: data.session, performanceData: data.performanceData};
+    var blobPerformance = new Blob([JSON.stringify(dataPerformance)], headers);
+    navigator.sendBeacon('https://csesd.site/json/api/performance', blobPerformance);
+
+    var dataActivity = {session: data.session, activityData: data.activityData};
+    var blobActivity = new Blob([JSON.stringify(dataActivity)], headers);
+    navigator.sendBeacon('https://csesd.site/json/api/activity', blobActivity);
+    */
   };
 })();

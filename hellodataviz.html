@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Visualization</title>
+  <script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .chart--container {
+      min-height: 530px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Line Graph</h1>
+  <div id='line'></div>
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    var lineConfig = {
+      "type": "line",
+      "series": [{
+        "values": [20, 40, 25, 50, 15, 45, 33, 34]
+      }, {
+        "values": [5, 30, 21, 18, 59, 50, 28, 33]
+      }, {
+        "values": [30, 5, 18, 21, 33, 41, 29, 15]
+      }]
+    };
+ 
+    zingchart.render({
+      id: 'line',
+      data: lineConfig,
+      height: "80%",
+      width: "80%"
+    });
+  </script>
+
+  <h1>Bar Chart</h1>
+  <div id='bar'></div>
+  <script>
+    var barConfig = {
+      type: "bar",
+      series: [{
+          values: [20, 40, 25, 50, 15, 45, 0, 0]
+        },
+        {
+          values: [null, null, 21, 18, 59, 50, 28, 33]
+        }
+      ]
+    };
+ 
+    zingchart.render({
+      id: 'bar',
+      data: barConfig,
+      height: "80%",
+      width: "80%"
+    });
+  </script>
+
+  <h1>Language Percentage</h1>
+  <div id="myChart" class="chart--container">
+    <a class="zc-ref" href="https://www.zingchart.com/">Powered by ZingChart</a>
+  </div>
+
+  
+  <script>
+    let chartConfig = {
+      type: 'ring',
+      legend: {
+        align: 'center',
+        borderWidth: '0px',
+        item: {
+          cursor: 'pointer',
+          fontSize: '15px',
+          offsetX: '-5px',
+        },
+        layout: 'vertical',
+        marker: {
+          type: 'circle',
+          cursor: 'pointer',
+          size: '10px',
+        },
+        toggleAction: 'remove', // remove plot so it re-calculates percentage
+        verticalAlign: 'middle',
+      },
+      plot: {
+        tooltip: {
+          visible: false,
+        },
+        detached: false, // turn off click on slices
+        slice: 150, // set hole size in middle of chart
+      },
+
+      //get languages number && update values
+      series: [{
+          values: [20],
+          backgroundColor: '#FE7A5D',
+        },
+        {
+          values: [20],
+          backgroundColor: '#69A8F8',
+        },
+        {
+          values: [20],
+          backgroundColor: '#54DBB9',
+        },
+        {
+          values: [20],
+          backgroundColor: '#FEDA60',
+        },
+      ],
+    };
+
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig,
+      height: '100%',
+      width: '100%',
+    });
+
+    /*
+     * Every 35 milliseconds we will update the chart
+     * angle by 1.5 degress so it simulates rotatition
+     * animation!
+     */
+    let angle = 0;
+    setInterval(function() {
+      angle = angle + 1.5;
+      zingchart.exec('myChart', 'modify', {
+        object: 'plot',
+        data: {
+          refAngle: angle % 360,
+        },
+      });
+    }, 35);
+  </script>
+</body>
+
+</html>

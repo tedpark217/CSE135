@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://cdn.zinggrid.com/zinggrid.min.js" defer></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Database</title>
+</head>
+
+<body>
+  <h1 align="center">Database</h1>
+
+  <iframe name="update" id="update" style="display: none;"></iframe>
+  <form id="sqlForm" action="sql.php" target="update">
+  </form>
+  <script type="text/javascript">
+    document.getElementById('sqlForm').submit();
+  </script>
+
+  <form id="databaseForm" action="database.php">
+  </form>
+  <script type="text/javascript">
+    document.getElementById('databaseForm').submit();
+  </script>
+
+</body>
+</html>

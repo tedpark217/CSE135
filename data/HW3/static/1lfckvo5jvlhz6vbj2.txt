@@ -1,0 +1,1 @@
+{"userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36","language":"en","acceptCookies":true,"javascriptEnabled":true,"screenSize":{"width":2560,"height":1440},"windowSize":{"width":1600,"height":1159},"connection":"4g","allowsCSS":false}
